@@ -6,74 +6,66 @@ HOST: http://polls.apiblueprint.org/
 Polls is a simple API allowing consumers to view polls and vote in them.
 
 ## Questions Collection [/popular]
-
-### List All Questions [GET]
-
+### Popular [GET]
 + Response 200 (application/json)
 
         {
-            "list": [
+            'list': [
                 {
-                    "id": 32,
-                    "name": "方丈庭園",
-                    "genre": "観光",
-                    "image": "hogehoge.png",
-                    "description": "hoge! hoge!",
-                    "url": "http:hogehoge.com"
+                    'id': 32,
+                    'name': '方丈庭園',
+                    'genre': '観光,'
+                    'image': 'hogehoge.png',
+                    'description': 'hoge! hoge!',
+                    'url': 'http:hogehoge.com'
                 },
                 {
-                    "id": 15,
-                    "name": "瑞泉寺",
-                    "genre": "観光",
-                    "image": "zuisenji.png",
-                    "description": "ずいせんじ、と読みます。",
-                    "url": "http://www.kamakura-zuisenji.or.jp"
+                    'id': 15,
+                    'name': '瑞泉寺',
+                    'genre': '観光',
+                    'image': 'zuisenji.png',
+                    'description': 'ずいせんじ、と読みます。',
+                    'url': 'http://www.kamakura-zuisenji.or.jp'
                 }
             ]
         }
 
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
+## Questions Collection [/routes]
+### Popular [GET]
++ Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
+            'list': [
+                {
+                    'id': 1,
+                    'name': '江ノ島電鉄',
+                    'slug': 'enoden'
+                    'image': 'https://goo.gl/DVMFCJ'
+                }
             ]
         }
 
-+ Response 201 (application/json)
+## Questions Collection [/routes/{id}/stations]
+### Popular [GET]
++ Response 200 (application/json)
++ Parameters
+    + id (number) - routeId
 
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        {
+            routeId: 1
+            'list': [
+                {
+                    id: 0123456789,
+                    name: '鎌倉',
+                    nextId: 1234567890,
+                    description: '鎌倉駅でーす。'
+                },
+                {
+                    id: 1234567890,
+                    name: '和田塚',
+                    nextId: 2345678901
+                    prevId: 0123456789
+                    description: '和田塚駅だよーん。'
+                }
+            ]
+        }
