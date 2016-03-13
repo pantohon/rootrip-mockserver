@@ -10,22 +10,22 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            'list': [
+            "list": [
                 {
-                    'id': 32,
-                    'name': '方丈庭園',
-                    'genre': '観光,'
-                    'image': 'hogehoge.png',
-                    'description': 'hoge! hoge!',
-                    'url': 'http:hogehoge.com'
+                    "id": 32,
+                    "name": "方丈庭園",
+                    "genre": "観光,"
+                    "image": "hogehoge.png",
+                    "description": "hoge! hoge!",
+                    "url": "http:hogehoge.com"
                 },
                 {
-                    'id': 15,
-                    'name': '瑞泉寺',
-                    'genre': '観光',
-                    'image': 'zuisenji.png',
-                    'description': 'ずいせんじ、と読みます。',
-                    'url': 'http://www.kamakura-zuisenji.or.jp'
+                    "id": 15,
+                    "name": "瑞泉寺",
+                    "genre": "観光",
+                    "image": "zuisenji.png",
+                    "description": "ずいせんじ、と読みます。",
+                    "url": "http://www.kamakura-zuisenji.or.jp"
                 }
             ]
         }
@@ -35,12 +35,12 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            'list': [
+            "list": [
                 {
-                    'id': 1,
-                    'name': '江ノ島電鉄',
-                    'slug': 'enoden'
-                    'image': 'https://goo.gl/DVMFCJ'
+                    "id": 1,
+                    "name": "江ノ島電鉄",
+                    "slug": "enoden"
+                    "image": "https://goo.gl/DVMFCJ"
                 }
             ]
         }
@@ -53,19 +53,19 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            'list': [
+            "list": [
                 {
-                    'id': 0123456789,
-                    'name': '鎌倉',
-                    'nextId': 1234567890,
-                    'description': '鎌倉駅でーす。'
+                    "id": 0123456789,
+                    "name": "鎌倉",
+                    "nextId": 1234567890,
+                    "description": "鎌倉駅でーす。"
                 },
                 {
-                    'id': 1234567890,
-                    'name': '和田塚',
-                    'nextId': 2345678901,
-                    'prevId': 0123456789,
-                    'description': '和田塚駅だよーん。'
+                    "id": 1234567890,
+                    "name": "和田塚",
+                    "nextId": 2345678901,
+                    "prevId": 0123456789,
+                    "description": "和田塚駅だよーん。"
                 }
             ]
         }
@@ -79,19 +79,19 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            'id': 1234567890,
-            'name': '和田塚',
-            'description': '和田塚駅でーーーーーーーーす。誰も降りなくて寂しい。'
-            'nextStationId': 0123456789
-            'nextStation': {
-                'id': 0123456789,
-                'name': '鎌倉',
-                'description': '鎌倉駅でーす。'
+            "id": 1234567890,
+            "name": "和田塚",
+            "description": "和田塚駅でーーーーーーーーす。誰も降りなくて寂しい。"
+            "nextStationId": 0123456789
+            "nextStation": {
+                "id": 0123456789,
+                "name": "鎌倉",
+                "description": "鎌倉駅でーす。"
             },
-            'nextStationId': 2345678901
-            'prevStation': {
-                'id': 2345678901,
-                'name': '由比ヶ浜',
-                'description': '鎌倉駅でーす。'
+            "nextStationId": 2345678901
+            "prevStation": {
+                "id": 2345678901,
+                "name": "由比ヶ浜",
+                "description": "鎌倉駅でーす。"
             }
         }
