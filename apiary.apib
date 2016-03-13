@@ -45,9 +45,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             ]
         }
 
-## Stations List [/routes/{id}/stations]
+## Stations List [/routes/{routId}/stations]
 + Parameters
-    + id (number) - routeId
+    + routId (number) - routeId
 
 ### Get Stations List by Route [GET]
 + Response 200 (application/json)
@@ -68,4 +68,30 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                     'description': '和田塚駅だよーん。'
                 }
             ]
+        }
+
+## Station [/route/{routId}/stations/{stationId}]
++ Parameters
+    + routId (number) - routeId
+    + stationId (number) - stationId
+
+### Get Station Detail Data [GET]
++ Response 200 (application/json)
+
+        {
+            'id': 1234567890,
+            'name': '和田塚',
+            'description': '和田塚駅でーーーーーーーーす。誰も降りなくて寂しい。'
+            'nextStationId': 0123456789
+            'nextStation': {
+                'id': 0123456789,
+                'name': '鎌倉',
+                'description': '鎌倉駅でーす。'
+            },
+            'nextStationId': 2345678901
+            'prevStation': {
+                'id': 2345678901,
+                'name': '由比ヶ浜',
+                'description': '鎌倉駅でーす。'
+            }
         }
