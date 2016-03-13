@@ -103,3 +103,84 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 "description": "鎌倉駅でーす。"
             }
         }
+
+## Station [/route/{routId}/stations/{stationId}/spots]
++ Parameters
+    + routId (number) - routeId
+    + stationId (number) - stationId
+
+### Get Station Detail Data [GET]
++ Response 200 (application/json)
+
+        {
+            list [
+                {
+                    "id": 123,
+                    "name": "遊山",
+                    "genre": "food",
+                    "image": "https://goo.gl/2jDzad"
+                    "description": "鎌倉の歴史に比べれば僅かな時間ですが、遊山も鎌倉で７年の年月をかさねて参りました。歴史が不変である様に、変わらぬ味と香の珈琲をお届けしたいと考えております。鎌倉の常連様に愛され、初めてお目にかかる方に親しまれる様、勤めてまいります。鎌倉にお越しの際は、是非思い出の一つに遊山をお加え頂ければ幸いに存じます。お目にかかれる日を楽しみに致しております。 ",
+                    "url": "http://tabelog.com/kanagawa/A1404/A140402/14008019/",
+                    "nearStations": [
+                        {
+                            id: 123456789,
+                            name: "鎌倉",
+                            description: "鎌倉駅でーす。"
+                            distance: 60000
+                        },
+                        {
+                            id: 234567891,
+                            name: "和田塚",
+                            description: "和田塚でーす。"
+                            distance: 90000
+                        }
+                    ]
+                },
+                {
+                    "id": 231,
+                    "name": "鶴ケ丘八幡宮",
+                    "genre": "place",
+                    "image": "http://goo.gl/Y1t8lv"
+                    "description": "鶴岡八幡宮（つるがおかはちまんぐう）は、神奈川県鎌倉市にある神社。旧社格は国幣中社で、現在は神社本庁の別表神社。別称として鎌倉八幡宮とも呼ばれる。武家源氏、鎌倉武士の守護神。鎌倉初代将軍源頼朝ゆかりの神社として全国の八幡社の中では知名度が高く、近年では三大八幡宮の一社に入ることがある[注釈 1]。境内は国の史跡に指定されている。",
+                    "url": "https://www.hachimangu.or.jp/",
+                    "nearStations": [
+                        {
+                            id: 123456789,
+                            name: "鎌倉",
+                            description: "鎌倉駅でーす。"
+                            distance: 60000
+                        }
+                    ]
+                }
+            ]
+        }
+
+## Station [/spots/{spotsId}]
++ Parameters
+    + spotsId (number) - spotsId
+
+### Get Station Detail Data [GET]
++ Response 200 (application/json)
+
+        {
+            "id": 123,
+            "name": "遊山",
+            "genre": "food",
+            "image": "https://goo.gl/2jDzad"
+            "description": "鎌倉の歴史に比べれば僅かな時間ですが、遊山も鎌倉で７年の年月をかさねて参りました。歴史が不変である様に、変わらぬ味と香の珈琲をお届けしたいと考えております。鎌倉の常連様に愛され、初めてお目にかかる方に親しまれる様、勤めてまいります。鎌倉にお越しの際は、是非思い出の一つに遊山をお加え頂ければ幸いに存じます。お目にかかれる日を楽しみに致しております。 ",
+            "url": "http://tabelog.com/kanagawa/A1404/A140402/14008019/",
+            "nearStations": [
+                {
+                    id: 123456789,
+                    name: "鎌倉",
+                    description: "鎌倉駅でーす。"
+                    distance: 60000
+                },
+                {
+                    id: 234567891,
+                    name: "和田塚",
+                    description: "和田塚でーす。"
+                    distance: 90000
+                }
+            ]
+        },
