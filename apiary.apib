@@ -46,10 +46,11 @@ Polls is a simple API allowing consumers to view polls and vote in them.
         }
 
 ## Stations List [/routes/{id}/stations]
-### Get Stations List by Route [GET]
-+ Response 200 (application/json)
 + Parameters
     + id (number) - routeId
+
+### Get Stations List by Route [GET]
++ Response 200 (application/json)
 
         {
             'list': [
@@ -62,9 +63,9 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 {
                     'id': 1234567890,
                     'name': '和田塚',
-                    'nextId': 2345678901
-                    'prevId': 0123456789
-                    'description: '和田塚駅だよーん。'
+                    'nextId': 2345678901,
+                    'prevId': 0123456789,
+                    'description': '和田塚駅だよーん。'
                 }
             ]
         }
