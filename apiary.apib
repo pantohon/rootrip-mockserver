@@ -55,16 +55,23 @@ Polls is a simple API allowing consumers to view polls and vote in them.
         {
             "list": [
                 {
-                    "id": 0123456789,
+                    "id": 123456789,
                     "name": "鎌倉",
-                    "nextId": 1234567890,
+                    "nextId": 234567891,
                     "description": "鎌倉駅でーす。"
                 },
                 {
-                    "id": 1234567890,
+                    "id": 234567891,
                     "name": "和田塚",
-                    "nextId": 2345678901,
-                    "prevId": 0123456789,
+                    "nextId": 345678912,
+                    "prevId": 123456789,
+                    "description": "和田塚駅だよーん。"
+                },
+                {
+                    "id": 345678912,
+                    "name": "由比ヶ浜",
+                    "nextId": 456789123,
+                    "prevId": 234567891,
                     "description": "和田塚駅だよーん。"
                 }
             ]
@@ -79,19 +86,19 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 + Response 200 (application/json)
 
         {
-            "id": 1234567890,
+            "id": 234567891,
             "name": "和田塚",
             "images": "http://goo.gl/EBJYFd",
             "description": "和田塚駅でーーーーーーーーす。誰も降りなくて寂しい。",
-            "nextStationId": 0123456789,
+            "nextStationId": 123456789,
             "nextStation": {
-                "id": 0123456789,
+                "id": 123456789,
                 "name": "鎌倉",
                 "description": "鎌倉駅でーす。"
             },
-            "nextStationId": 2345678901,
+            "nextStationId": 345678912,
             "prevStation": {
-                "id": 2345678901,
+                "id": 3456789012,
                 "name": "由比ヶ浜",
                 "description": "鎌倉駅でーす。"
             }
