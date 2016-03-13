@@ -5,8 +5,8 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/popular]
-### Popular [GET]
+## Popular [/popular]
+### Get Popular Places List [GET]
 + Response 200 (application/json)
 
         {
@@ -30,8 +30,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             ]
         }
 
-## Questions Collection [/routes]
-### Popular [GET]
+## Routes [/routes]
+### Get Lines List [GET]
 + Response 200 (application/json)
 
         {
@@ -45,27 +45,26 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             ]
         }
 
-## Questions Collection [/routes/{id}/stations]
-### Popular [GET]
+## Stations List [/routes/{id}/stations]
+### Get Stations List by Route [GET]
 + Response 200 (application/json)
 + Parameters
     + id (number) - routeId
 
         {
-            routeId: 1
             'list': [
                 {
-                    id: 0123456789,
-                    name: '鎌倉',
-                    nextId: 1234567890,
-                    description: '鎌倉駅でーす。'
+                    'id': 0123456789,
+                    'name': '鎌倉',
+                    'nextId': 1234567890,
+                    'description': '鎌倉駅でーす。'
                 },
                 {
-                    id: 1234567890,
-                    name: '和田塚',
-                    nextId: 2345678901
-                    prevId: 0123456789
-                    description: '和田塚駅だよーん。'
+                    'id': 1234567890,
+                    'name': '和田塚',
+                    'nextId': 2345678901
+                    'prevId': 0123456789
+                    'description: '和田塚駅だよーん。'
                 }
             ]
         }
